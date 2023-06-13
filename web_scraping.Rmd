@@ -17,32 +17,12 @@ knitr::opts_chunk$set(echo = TRUE, cache = F, tidy = T,
 ```{r}
 # set working directory
 # ---------------------
-setwd("D:/Ph.D_materials/Programming/R_programming/mdsr/webscraping")
-
+setwd("D:/Ph.D_materials/Programming/R_programming/mdsr/cryptocurrencies")
+ 
 # Load functions and packages
 # ---------------------------
 source("webscrap_pkg.R")
 ```
-
-```{r}
-# create functions to minimize repeated code usage
-# ------------------------------------------------
-# get.data <- function(x){
-# myurl <- read_html("https://coinmarketcap.com/gainers-losers/") # read our webpage as html
-# myurl <- html_table(myurl)  # convert to an html table for ease of use
-#   
-# 
-#   crypto_dat <- myurl[[1]]  # pull the first item in the list
-#   crypto_dat$24h <- gsub("%","",crypto_dat$24h) # cleanup - remove non-characters
-#   crypto_dat$24h <- as.numeric(crypto_dat$24h) #cleanup - convert percentages column to numeric so we can sort
-#   # crypto_dat$Symbol <- as.factor(crypto_dat$) # cleanup - convert coin symbol to factor
-#   # 
-#   # crypto_dat$Symbol <- factor(crypto_dat$Symbol,
-#   #                           levels = crypto_dat$Symbol[order(crypto_dat$'% 1h')])  # sort by gain value
-#   crypto_dat  # return the finished data.frame
-# }
-```
-
 
 
 ```{r}
